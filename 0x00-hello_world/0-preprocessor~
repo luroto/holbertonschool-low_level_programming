@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -aux-info >  $CFILE | echo add > c
