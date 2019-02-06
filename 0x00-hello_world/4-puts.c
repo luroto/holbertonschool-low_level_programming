@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /**
-*puts - Printing a given line
+*main - Printing a given line
 *
 *Description: This function prints a given line
-*Returns: The exercise requires it must be 0
+*
+*Return: The exercise requires it must be 0
 */
-void puts(void)
+int main(void)
 {
-puts("Programming is like building a multilingual puzzle\n");
+puts("Programming is like building a multilingual puzzle");
 return (0);
 }
-
