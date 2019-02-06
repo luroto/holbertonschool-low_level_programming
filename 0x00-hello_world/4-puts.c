@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-*main - Printing a given line
+*main - This function is for printing a previously given text
 *
-*Description: This function prints a given line
+*Description: We use puts for doing this task
 *
 *Return: The exercise requires it must be 0
 */
