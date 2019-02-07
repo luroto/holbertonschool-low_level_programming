@@ -16,7 +16,6 @@ if (alpha == 'e' || alpha == 'q')
 {
 alpha++;
 }
-
 putchar(alpha);
 }
 putchar('\n');
