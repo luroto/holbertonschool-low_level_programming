@@ -5,7 +5,7 @@
 *main - Takes a random number and prints if is positive, negative or zero
 *
 *Description: Using diverse functions for random, we add an
-*if function to print the type of*number which was generated.
+*if function to print the type of number which was generated.
 *
 *Return: It is supposed to return 0
 */
