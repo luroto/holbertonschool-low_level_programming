@@ -1,13 +1,9 @@
 #include <stdio.h>
+
 /**
-*main - Displays size of various types
+*main- Display the size of some variables
 *
-*Description: This function displays the size of some variables
-*@sizeof(char) Getting the size in kb of char
-*@sizeof(int) Getting the size in kb of int
-*@sizeof(long int) Getting the size in kb of long int
-*@sizeof(long long int) Getting the size in kb of long long int
-*@sizeof (float) Getting the size in kb of float
+*Description: This function displays size of variables.
 *
 *Return: It is supossed to return 0
 */
