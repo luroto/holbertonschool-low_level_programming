@@ -14,7 +14,7 @@ int numa, numb;
 
 for (numa = 48 ; numa <= 57 ; numa++)
 {
-for (numb = numa+1 ; numb <= 57 ; numb++)
+for (numb = numa + 1 ; numb <= 57 ; numb++)
 {
 putchar(numa);
 putchar(numb);
