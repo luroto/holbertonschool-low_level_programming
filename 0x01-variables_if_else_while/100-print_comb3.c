@@ -12,13 +12,13 @@ int main(void)
 {
 int numa, numb;
 
-for (numa = 48 ; numa <= 57 ; numa++)
+for (numa = 48; numa <= 57; numa++)
 {
-for (numb = numa + 1 ; numb <= 57 ; numb++)
+for (numb = numa + 1; numb <= 57; numb++)
 {
 putchar(numa);
 putchar(numb);
-if (numb == 56 && numa == 57)
+if (numa == 56 && numb == 57)
 {
 numa++;
 numb++;
