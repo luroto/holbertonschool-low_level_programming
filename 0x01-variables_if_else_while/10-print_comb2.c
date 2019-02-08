@@ -12,7 +12,7 @@ int numa, numb;
 
 for (numa = 48 ; numa <= 57 ; numa++)
 {
-for (numb = 48 ; numb <= 58 ; numb++)
+for (numb = 48 ; numb <= 57 ; numb++)
 {
 putchar(numa);
 putchar(numb);
