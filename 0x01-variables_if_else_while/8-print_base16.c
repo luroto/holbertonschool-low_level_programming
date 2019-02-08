@@ -2,19 +2,19 @@
 /**
  *main - We print the base 16 numbers in lowercase
  *
- *Description: 
+ *Description: Printing numbers
  *
  *Return: It is supossed to be 0
  */
 int main(void)
 {
-char alpha;
-for (alpha = 'a' ; alpha <= 'z'; alpha++)
+char num, alpha;
+for (num = '0' ; num <= '9'; num++)
 {
-if (alpha == 'e' || alpha == 'q')
-{
-alpha++;
+putchar(num);
 }
+for (alpha = 'a' ; alpha <= 'f'; alpha++)
+{
 putchar(alpha);
 }
 putchar('\n');
