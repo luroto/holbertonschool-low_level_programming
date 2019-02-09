@@ -21,7 +21,7 @@ int main(void)
 				putchar(numb);
 				putchar(numc);
 				{
-					if (numa == 55 && numb == 56 && numc ==57)
+					if (numa == 55 && numb == 56 && numc == 57)
 					{
 						numa++;
 						numb++;
