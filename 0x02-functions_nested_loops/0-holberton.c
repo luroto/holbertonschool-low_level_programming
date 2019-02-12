@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *main : We use this function to test _putchar
+ *main - We use this function to test _putchar
  *
  *Return: It is supposed to be 0
  */
