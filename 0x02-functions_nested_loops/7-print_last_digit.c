@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
  *print_last_digit - Prints the last digit of a number
+ *
  *@a: stores input
  *
  *Return: It is supposed to be zero
