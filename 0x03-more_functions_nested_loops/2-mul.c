@@ -6,11 +6,12 @@
  *
  *@b: Stores the other one
  *
+ *@d: contains the result
+ *
  *Return: It is supposed to be 0
  *
  */
 int mul(int a, int b)
 {
-x_putchar("%d", (a * b));
-return (0);
+return (a * b);
 }
