@@ -19,9 +19,8 @@ else if ((n % 5) == 0)
 {
 a = n + a;
 }
-	n++;
+n++;
 }
-printf("%d \n", a);
-
+printf("%d\n", a);
 return (0);
 }
