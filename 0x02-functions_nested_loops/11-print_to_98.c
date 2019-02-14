@@ -3,8 +3,9 @@
 /**
  *print_to_98 - print all natural numbers from n to 98
  *
- *@n : stores the input
+ *@n: stores the input
  *
+ *Return: void function
  */
 void print_to_98(int n)
 {
@@ -16,11 +17,11 @@ for (x = n;  x <= 98; x++)
 {
 if (x < 98)
 {
-	printf("%d,", x);
+printf("%d,", x);
 }
 else
 {
-	printf("%d", x);
+printf("%d", x);
 }
 }
 putchar('\n');
@@ -38,11 +39,11 @@ else
 printf("%d", x);
 }
 }
-	putchar('\n');
+putchar('\n');
 }
 else if (n == 98)
 {
-	printf("%d", n);
+printf("%d", n);
 }
-	putchar('\n');
+putchar('\n');
 }
