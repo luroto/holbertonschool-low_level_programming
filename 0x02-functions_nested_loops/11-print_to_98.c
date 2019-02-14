@@ -24,7 +24,6 @@ else
 printf("%d", x);
 }
 }
-putchar('\n');
 }
 else if (n > 98)
 {
@@ -39,7 +38,6 @@ else
 printf("%d", x);
 }
 }
-putchar('\n');
 }
 else if (n == 98)
 {
