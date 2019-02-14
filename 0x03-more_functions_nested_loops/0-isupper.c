@@ -3,7 +3,7 @@
 /**
  *_isupper - checks for uppercase character
  *
- *@c - Stores the input
+ *@c:- Stores the input
  *
  *Return: It is supposed to be zero
  */
