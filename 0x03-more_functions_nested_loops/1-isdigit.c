@@ -5,7 +5,6 @@
  *@c: Stores the input
  *
  *Return: It's supposed to be 0
- *
  */
 int _isdigit (int c)
 {
