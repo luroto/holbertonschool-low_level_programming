@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-int f1, f2, f3, c;
+int c;
+long int f1, f2, f3;
 
 f1 = 0;
 f2 = 1;
@@ -18,11 +19,11 @@ f1 = f2;
 f2 = f3;
 if( c == 49)
 {
-	printf("%d", f3);
+	printf("%ld", f3);
 }
 else
 {
-	printf("%d, ", f3);
+	printf("%ld, ", f3);
 }
 }
 putchar('\n');
