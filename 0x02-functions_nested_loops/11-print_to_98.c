@@ -41,7 +41,7 @@ printf("%d", x);
 }
 else if (n == 98)
 {
-printf("%d ", n);
+printf("%d", n);
 }
 putchar('\n');
 }
