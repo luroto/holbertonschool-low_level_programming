@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *print_line -prints a _ character n times
+ *print_line - prints a _ character n times
  *
  *@n: number of times the char has to be printed
  *
