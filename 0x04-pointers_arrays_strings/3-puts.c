@@ -1,6 +1,9 @@
+
 #include "holberton.h"
 /**
  *_puts - Print a string using a pointer
+ *
+ *@str - Source of the string
  *
  *Return: It is supposed to be 0
  */
