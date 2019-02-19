@@ -3,7 +3,7 @@
 /**
  *_puts - Print a string using a pointer
  *
- *@str - Source of the string
+ *@str:  Source of the string
  *
  *Return: It is supposed to be 0
  */
