@@ -1,0 +1,1 @@
+Hi. This is the directory of arrays, pointers and strings project.
