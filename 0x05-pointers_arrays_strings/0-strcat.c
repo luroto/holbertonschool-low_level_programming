@@ -12,17 +12,11 @@ char *_strcat(char *dest, char *src)
 {
 	int idest = 0, isrc = 0, totalsrc = 0;
 
-	while (*(dest + idest))
-	{
-		dest++;
+	while (dest[idest])
 		idest++;
-	}
-	while (*(src + isrc))
-	{
-		src++;
+	while (src[isrc])
 		isrc++;
-	}
-	while (totalsrc < isrc)
+	while (totalsrc <= isrc)
 	{
 		dest[idest + totalsrc] = src[totalsrc];
 		totalsrc++;
