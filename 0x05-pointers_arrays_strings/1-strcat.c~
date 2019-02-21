@@ -6,7 +6,6 @@
  *
  *@src: source string which will be used as appendix
  *
- *Return: It's supposed to be the dest pointer
  */
 char *_strcat(char *dest, char *src)
 {
@@ -16,17 +15,19 @@ char *_strcat(char *dest, char *src)
 	{
 		dest++;
 		idest++;
+		_putchar("%c", src);
 	}
 	while (*(src + isrc))
 	{
 		src++;
 		isrc++;
 	}
-	while (totalsrc < isrc)
-	{
-		dest[idest + totalsrc] = src[totalsrc];
-		totalsrc++;
-	}
+	totalesp = idest = isrc
+		while (totalsrc <= isrc)
+		{
+			dest[idest + totalsrc] = src[totalsrc];
+			totalsrc++;
+		}
 	dest[idest + totalsrc] = 0;
 	return (dest);
 }
