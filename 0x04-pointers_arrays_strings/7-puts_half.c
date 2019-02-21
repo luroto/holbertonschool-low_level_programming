@@ -16,15 +16,15 @@ void puts_half(char *str)
 	}
 	if (totalpositions % 2 == 0)
 	{
-		l = totalpositions / 2;
+		beginningposition = totalpositions / 2;
 	}
 	else if (totalpositions % 2 != 0)
 	{
-		l = ((totalpositions + 1) / 2);
+		beginningposition = ((totalpositions + 1) / 2);
 	}
 		while (beginningposition < totalpositions)
 		{
-			_putchar(str[beginnningposition]);
+			_putchar(str[beginningposition]);
 			beginningposition++;
 		}
 		_putchar('\n');
