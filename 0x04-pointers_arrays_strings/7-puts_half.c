@@ -8,20 +8,24 @@
  */
 void puts_half(char *str)
 {
-	int x = 0, l;
+	int totalpositions = 0, beginningposition;
 
-	while (*(str + x))
+	while (str[totalpositions])
+	{
+		totalpositions++;
+	}
+	if (totalpositions % 2 == 0)
+	{
+		l = totalpositions / 2;
+	}
+	else if (totalpositions % 2 != 0)
+	{
+		l = ((totalpositions + 1) / 2);
+	}
+		while (beginningposition < totalpositions)
 		{
-			x++;
-		}
-	if (x % 2 == 0)
-			l = x / 2;
-	else if (x % 2 != 0)
-				l = ((x - 1) / 2);
-		while (l < x)
-		{
-			_putchar(str[l]);
-			l++;
+			_putchar(str[beginnningposition]);
+			beginningposition++;
 		}
 		_putchar('\n');
 }
