@@ -3,7 +3,6 @@
  *_strcmp - compares two strings lexicographically
  *
  *@s1: first source
- *
  *@s2: second source
  *
  *Return: it depends on the result, 0 if they are equal, otherwise it prints
@@ -24,11 +23,11 @@ int _strcmp(char *s1, char *s2)
 			igualdad = s1[iterador] - s2[iterador];
 			break;
 		}
-			else
-			{
-				igualdad = 0;
-			}
-			iterador++;
+		else
+		{
+			igualdad = 0;
+		}
+		iterador++;
 	}
 		return (igualdad);
 }
