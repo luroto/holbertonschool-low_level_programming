@@ -20,10 +20,10 @@ int _strcmp(char *s1, char *s2)
 	while (iterador <= iteras1)
 	{
 		if (s1[iterador] != s2[iterador])
-			{
-				igualdad = s1[iterador] - s2[iterador];
-				break;
-			}
+		{
+			igualdad = s1[iterador] - s2[iterador];
+			break;
+		}
 			else
 			{
 				igualdad = 0;
