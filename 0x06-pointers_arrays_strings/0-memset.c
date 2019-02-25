@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *_memset - fills the first n bytes of the memory area pointed to.
+ **_memset - fills the first n bytes of the memory area pointed to.
  *
  *@s: pointer to the memory area
  *@b: constant byte
