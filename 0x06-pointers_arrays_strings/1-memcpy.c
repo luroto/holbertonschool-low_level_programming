@@ -10,16 +10,8 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i = 0, isrc = 0;
+	unsigned int i = 0;
 
-	while (src[isrc])
-	{
-		isrc++;
-	}
-	if (n > isrc)
-	{
-		n = isrc;
-	}
 	while (i < n)
 	{
 		dest[i] = src[i];
