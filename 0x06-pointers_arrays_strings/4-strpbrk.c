@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
+ **_strpbrk - searches a string for any of a set of bytes
  *
+ *@s: source string
+ *@accept: array of accepted values
  *
- *
- *
- *
- *
+ *Return: bytes on s which matches in accept or NULL if we don't find nothing
  *
  */
 char *_strpbrk(char *s, char *accept)
