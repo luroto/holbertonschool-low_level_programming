@@ -22,9 +22,9 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 		if (accept[comp] == 0)
-			{
-				break;
-			}
+		{
+			break;
+		}
 	}
-return (metacon);
+	return (metacon);
 }
