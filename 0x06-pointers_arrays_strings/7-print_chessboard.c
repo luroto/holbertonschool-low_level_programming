@@ -8,17 +8,14 @@
  */
 void print_chessboard(char (*a)[8])
 {
-        int contador, comp ;
-	contador = 0;
-	while (a[contador])
+	int contador = 0, comp = 0;
+
+	for (contador = 0; contador < 8; contador++)
+	{
+		for (comp = 0; comp < 8; comp++)
 		{
-			comp = 0;
-			while (a[comp])
-			{
-				_putchar(a [contador] [comp]);
-				comp++;
-			}
-				_putchar('\n');
-				contador++;
+			_putchar(a[contador][comp]);
 		}
+		_putchar('\n');
+	}
 }
