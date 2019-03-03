@@ -6,14 +6,15 @@
  *Return; It is supposed to be 0.
  *
  */
-int main(__attribute__((argv)) int argc)
+int main(int argc, char **argv)
 {
 	int cont;
+	(void) argv;
 
-	if (argc > 1)
+	if (argc > 0)
 	{
-		for (cont = 0; cont < argc; cont++)
-			printf ("%c", cont);
+		for (cont = 0; cont < argc; cont++);
 	}
-	return (0);
+	printf ("%d", cont);
+	printf("\n");
 }
