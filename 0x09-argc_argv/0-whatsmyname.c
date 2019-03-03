@@ -6,7 +6,7 @@
  *@argc: counter of arguments
  *@argv: name of arguments
  *
- *Return: = if succesful
+ *Return: 0 if succesful
  */
 int whatsmyname(int argc, char **argv)
 {
