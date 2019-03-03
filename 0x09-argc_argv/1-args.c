@@ -3,18 +3,23 @@
 /**
  *main - Prints the number of arguments passed into it
  *
- *Return; It is supposed to be 0.
- *
+ *@argc: number of arguments
+ *@argv: arguments
+ *Return: It is supposed to be 0
  */
 int main(int argc, char **argv)
 {
-	int cont;
+	int cont = 0;
 	(void) argv;
 
-	if (argc > 0)
+	if (argc > 1)
 	{
-		for (cont = 0; cont < argc; cont++);
+		for (cont = 1; cont < argc; cont++);
 	}
-	printf ("%d", cont);
+	else
+	{
+		printf("%d", cont);
+	}
+	printf("%d", cont);
 	printf("\n");
 }
