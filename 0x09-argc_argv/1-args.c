@@ -16,10 +16,6 @@ int main(int argc, char **argv)
 	{
 		for (cont = 1; cont < argc; cont++);
 	}
-	else
-	{
-		printf("%d", cont);
-	}
 	printf("%d", cont);
 	printf("\n");
 }
