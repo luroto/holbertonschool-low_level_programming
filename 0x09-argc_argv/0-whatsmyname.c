@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *whatsmyname - Prints the name of the program
+ *main - Prints the name of the program
  *
  *@argc: counter of arguments
  *@argv: name of arguments
  *
  *Return: 0 if succesful
  */
-int whatsmyname(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	if (argc > 0)
 	{
