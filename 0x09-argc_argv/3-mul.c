@@ -17,19 +17,17 @@ int main(int argc, char ** argv)
 	{
 	}
 	}
-	for(iv = 0; iv < (i - 1); iv++)
+	for(iv = 0; iv <= (i - 1); iv++)
 	{
 		if (iv == 1)
 		{
-			multip1 = atoi(argv[2]);
+			multip1 = atoi(argv[1]);
 		}
-		if (iv == i - 1)
+		if (iv == 2)
 		{
-			multip2 = atoi(argv[3]);
+			multip2 = atoi(argv[2]);
 		}
 	}
-	printf("printing argc %d\n", i);
-	printf("printing argv %d\n", iv);
 	if (i != 3)
         {
                 printf("%s\n", "Error");
@@ -38,9 +36,6 @@ int main(int argc, char ** argv)
         else if (i == 3)
         {
                 product = multip1 * multip2;
-                printf("%u\n", multip1);
-		printf("%u\n", multip2);
-		printf("%d\n", product);
 	 }
 return (0);
 }
