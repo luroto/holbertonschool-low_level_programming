@@ -8,9 +8,9 @@
  */
 int main(int argc, char **argv)
 {
-	int cont = (argc - 1);
 	(void) argv;
+	int cont = (argc - 1);
 
-	printf("%d", cont);
-	printf("\n");
+	printf("%d\n", cont);
+	return (0);
 }
