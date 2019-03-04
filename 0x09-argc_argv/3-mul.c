@@ -4,20 +4,21 @@
 /**
  *main - stores two arguments as integers and prints their multiplication
  *
- *
- *
+ *@argc: number of arguments
+ *@argv: content of arguments
+ *Return: 0 if success, otherwise 1
  */
-int main(int argc, char ** argv)
+int main(int argc, char **argv)
 {
 	int i, iv, multip1, multip2, product;
 
 	if (argc > 1)
 	{
-	for(i = 1; i < argc; i++)
-	{
+		for (i = 1; i < argc; i++)
+		{
+		}
 	}
-	}
-	for(iv = 0; iv <= (i - 1); iv++)
+	for (iv = 0; iv <= (i - 1); iv++)
 	{
 		if (iv == 1)
 		{
@@ -29,14 +30,14 @@ int main(int argc, char ** argv)
 		}
 	}
 	if (i != 3)
-        {
-                printf("%s\n", "Error");
-                return (1);
-        }
-        else if (i == 3)
-        {
-                product = multip1 * multip2;
+	{
+		printf("%s\n", "Error");
+		return (1);
+	}
+	else if (i == 3)
+	{
+		product = multip1 * multip2;
 		printf("%d\n", product);
-	 }
-return (0);
+	}
+	return (0);
 }
