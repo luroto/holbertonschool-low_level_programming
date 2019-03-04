@@ -36,6 +36,7 @@ int main(int argc, char ** argv)
         else if (i == 3)
         {
                 product = multip1 * multip2;
+		printf("%d\n", product);
 	 }
 return (0);
 }
