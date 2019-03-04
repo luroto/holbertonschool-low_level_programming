@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
  *main - Prints the number of arguments passed into it
  *
@@ -9,13 +8,9 @@
  */
 int main(int argc, char **argv)
 {
-	int cont = 0;
+	int cont = (argc - 1);
 	(void) argv;
 
-	if (argc > 1)
-	{
-		for (cont = 1; cont < argc; cont++);
-	}
 	printf("%d", cont);
 	printf("\n");
 }
