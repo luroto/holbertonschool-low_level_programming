@@ -11,10 +11,11 @@ int main(int argc, char **argv)
 {
 	int cont = 0;
 	(void) argv;
-
 	if (argc > 1)
 	{
-		for (; cont < argc; cont++)
+		for (cont = 1; cont < argc; cont++)
+		{
+		}
 		cont--;
 	}
 	printf("%d\n", cont);
