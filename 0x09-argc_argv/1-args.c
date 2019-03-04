@@ -14,9 +14,9 @@ int main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-		for (; cont < argc; cont++);
+		for (; cont < argc; cont++)
 		cont--;
 	}
 	printf("%d\n", cont);
-	return(0);
+	return (0);
 }
