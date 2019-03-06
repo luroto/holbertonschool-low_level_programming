@@ -18,7 +18,6 @@ char *_strdup(char *str)
 	}
 	if (str == NULL)
 	{
-		printf("failed to allocate memory\n");
 		return (NULL);
 	}
 	nws = malloc(sizeof(*nws) * cont + 1);
@@ -26,7 +25,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	for (contn = 0; contn <= cont; contn++)
+	for (contn = 0; str[contn]; contn++)
 	{
 		nws[contn] = str[contn];
 	}
