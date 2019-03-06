@@ -32,6 +32,10 @@ char *str_concat(char *s1, char *s2)
 	}
 	totalcomb = (cstr1 + cstr2 + 1);
 	stringcomb = malloc(sizeof(*stringcomb) * totalcomb);
+	if (stringcomb == 0)
+	{
+		return (NULL);
+	}
 	for (contadorcomb = 0; contadorcomb <= totalcomb; contadorcomb++)
 	{
 		if (contadorcomb < cstr1)
