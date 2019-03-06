@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  **_strdup - copies a string on a newly allocated space
  *
@@ -18,6 +18,7 @@ char *_strdup(char *str)
 	}
 	if (str == NULL)
 	{
+		printf("failed to allocate memory\n");
 		return (NULL);
 	}
 	nws = malloc(sizeof(*nws) * cont + 1);
