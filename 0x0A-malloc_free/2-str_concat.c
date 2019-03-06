@@ -1,6 +1,14 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ **str_concat - concatenates two strings
+ *
+ *@s1: string 1
+ *@s2: string 2
+ *
+ *Return: pointer to the newly allocated memory
+ */
 char *str_concat(char *s1, char *s2)
 {
 	char *stringcomb;
@@ -35,6 +43,10 @@ char *str_concat(char *s1, char *s2)
 			stringcomb[contadorcomb] = s2[sustr];
 			sustr++;
 		}
+	}
+	if (stringcomb == NULL)
+	{
+		return (NULL);
 	}
 	return (stringcomb);
 }
