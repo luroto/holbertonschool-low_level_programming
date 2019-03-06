@@ -13,12 +13,12 @@ char *_strdup(char *str)
 	int cont, contn;
 	char *nws;
 
-	for (cont = 0; str[cont]; cont++)
-	{
-	}
 	if (str == NULL)
 	{
 		return (NULL);
+	}
+	for (cont = 0; str[cont]; cont++)
+	{
 	}
 	nws = malloc(sizeof(*nws) * cont + 1);
 	if (nws == NULL)
