@@ -10,7 +10,7 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int cont, contn;
+	int cont, contn;
 	char *nws;
 
 	for (cont = 0; str[cont]; cont++)
