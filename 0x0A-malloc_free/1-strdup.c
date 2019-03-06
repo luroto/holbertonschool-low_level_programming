@@ -6,8 +6,7 @@
  *
  *@str: source string
  *
- *
- *
+ *Return: It returns a pointer to the allocated memory
  */
 char *_strdup(char *str)
 {
@@ -30,5 +29,5 @@ char *_strdup(char *str)
 	{
 		nws[contn] = str[contn];
 	}
-	return(nws);
+	return (nws);
 }
