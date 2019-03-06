@@ -29,5 +29,9 @@ char *_strdup(char *str)
 	{
 		nws[contn] = str[contn];
 	}
+	if (nws == NULL)
+	{
+		return (NULL);
+	}
 	return (nws);
 }
