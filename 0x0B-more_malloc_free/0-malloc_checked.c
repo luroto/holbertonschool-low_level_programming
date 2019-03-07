@@ -10,4 +10,17 @@
  *
  *
  *
-/
+ */
+void *malloc_checked(unsigned int b)
+{
+	int *pointer;
+
+	pointer = malloc(sizeof(b));
+/**	
+if (pointer == NULL)
+	{
+		exit(98);
+	}
+*/
+	return (pointer);
+}
