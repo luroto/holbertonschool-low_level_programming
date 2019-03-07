@@ -10,7 +10,7 @@
  */
 void free_grid(int **grid, int height)
 {
-	int itera1, itera2;
+	int itera1;
 
 	if (*grid == NULL)
 	{
@@ -22,11 +22,7 @@ void free_grid(int **grid, int height)
 	}
 	for (itera1 = 0; itera1 < height; itera1++)
 	{
-		for (itera2 = 0; grid[itera2]; itera2++)
-		{
-		}
+		free(grid[itera1]);
 	}
-	free(grid[itera1]);
-	free(grid[itera2]);
 	free(grid);
 }
