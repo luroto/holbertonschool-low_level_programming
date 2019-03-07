@@ -12,7 +12,11 @@ void free_grid(int **grid, int height)
 {
 	int itera1, itera2;
 
-	if (*grid == NULL || height == 0)
+	if (*grid == NULL || *grid == 0)
+	{
+		return;
+	}
+	if (height == 0)
 	{
 		free(grid);
 		return;
