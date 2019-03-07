@@ -1,13 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  *free_grid - frees an array
  *
  *@grid: points to an array of chars
  *@height: indicates the number of rows in the array
- *
+ *Return: provided by the exercise
  */
 void free_grid(int **grid, int height)
 {
@@ -15,15 +14,16 @@ void free_grid(int **grid, int height)
 
 	if (*grid == NULL)
 	{
+		free(grid);
 		return;
 	}
 	for (itera1 = 0; itera1 < height; itera1++)
 	{
-		while (grid[itera2])
+		for (itera2 = 0; grid[itera2]; itera2++)
 		{
-			free(grid[itera1]);
 			free(grid[itera2]);
-			itera2++;
 		}
 	}
+	free(grid[itera1]);
+	free(grid);
 }
