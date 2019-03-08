@@ -13,9 +13,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 char *stringcomb;
 unsigned int cstr1 = 0, cstr2 = 0, contadorcomb, totalcomb = 0, sustr = 0;
 
-	if (s1 == 0)
+	if (!s1)
 		s1 = "";
-	if (s2 == 0)
+	if (!s2)
 		s2 = "";
 	while (s1[cstr1])
 		cstr1++;
