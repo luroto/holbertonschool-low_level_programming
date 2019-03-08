@@ -22,7 +22,7 @@ unsigned int cstr1 = 0, cstr2 = 0, contadorcomb, totalcomb = 0, sustr = 0;
 	while (s2[cstr2])
 		cstr2++;
 	if (n <= cstr2)
-		cstr2 = n;
+		cstr2 = n - 1;
 	totalcomb = (cstr1 + cstr2 + 1);
 	stringcomb = malloc(sizeof(*stringcomb) * totalcomb);
 	if (stringcomb == 0)
