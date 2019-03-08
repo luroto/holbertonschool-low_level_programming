@@ -4,7 +4,7 @@
 /**
  **string_nconcat - concatenates two strings
  *
- *@s1: contains the first string
+ΩΩ≈ *@s1: contains the first string
  *
  *@s2: contains the second string
  *
@@ -14,49 +14,47 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *newstr;
-	unsigned int longit, longi
+char *stringcomb;
+unsigned int cstr1 = 0, cstr2 = 0, contadorcomb, totalcomb = 0, sustr = 0;
 
-	if (s1 == NULL)
+	if (s1 == 0)
 	{
 		s1 = "";
 	}
-	if (s2 == NULL)
+	if (s2 == 0)
 	{
 		s2 = "";
 	}
-	while (s1[len1])
+	while (s1[cstr1])
 	{
-		len1++;
+		cstr1++;
 	}
-	while (s2[2len])
+	while (s2[cstr2])
 	{
-		2len++;
+		cstr2++;
 	}
-	if (n  >= 2len)
+	if (n <= cstr2)
 	{
-		n = 2len;
+		cstr2 = n;
 	}
-	else
-	{
-		totalen = len1 + n + 1;
-	}
-	newstr = malloc(sizeof(char *) * (len1 + n + 1));
-	if (newstr == NULL)
+	totalcomb = (cstr1 + cstr2 + 1);
+	stringcomb = malloc(sizeof(char) * totalcomb);
+	if (stringcomb == 0)
 	{
 		return (NULL);
 	}
-	for (conta1 = 0; conta1 < totalen; conta1++)
+	for (contadorcomb = 0; contadorcomb < totalcomb; contadorcomb++)
 	{
-		if (conta1 < len1)
+		if (contadorcomb < cstr1)
 		{
-			newstr[conta1] = s1[conta1];
+			stringcomb[contadorcomb] = s1[contadorcomb];
 		}
 		else
 		{
-			newstr[conta1] = s2[itera2];
-			itera2++;
+			stringcomb[contadorcomb] = s2[sustr];
+			sustr++;
 		}
 	}
-	return (newstr);
+	stringcomb[contadorcomb] = 0;
+	return (stringcomb);
 }
