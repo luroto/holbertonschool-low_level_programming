@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *times_tables - prints the 9 times table
+ *times_table - prints the 9 times table
  *
  *Return: it is suppossed to be 0
  */
@@ -15,7 +15,7 @@ void times_table(void)
 				aux = rows * columns;
 				d = (aux / 10);
 				u = (aux % 10);
-				if (aux < 10)
+				if (aux < 10 && aux != 0)
 				{
 					_putchar (' ');
 				}
