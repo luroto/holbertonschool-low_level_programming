@@ -6,6 +6,31 @@
  */
 void times_table(void)
 {
-	int h1, m1;
+	int rows, columns, aux, d, u;
 	{
-		for(
+		for (rows = 0; rows <= 9; rows++)
+		{
+			for (columns = 0; columns <= 9; columns++)
+			{
+				aux = rows * columns;
+				d = (aux / 10);
+				u = (aux % 10);
+				if (aux < 10)
+				{
+					_putchar (' ');
+				}
+				if (aux >= 10)
+				{
+					_putchar(d + '0');
+				}
+				_putchar(u + '0');
+				if (columns < 9)
+				{
+				_putchar(',');
+				_putchar(' ');
+				}
+			}
+			_putchar('\n');
+		}
+	}
+}
