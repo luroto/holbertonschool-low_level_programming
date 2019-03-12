@@ -1,0 +1,53 @@
+#ifndef _DOG_H
+#define _DOG_H
+/**
+ *struct dog - define parameters for functions
+ *@name: Dog's name
+ *@age: Dog's age
+ *@owner: Name of dog's owner
+ *
+ */
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
+typedef struct dog dog_t;
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+#include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
+/**
+ **_strdup - copies a string on a newly allocated space
+ *
+ *@str: source string
+ *
+ *Return: It returns a pointer to the allocated memory
+ */
+char *_strdup(char *str)
+{
+	int cont, contn;
+	char *nws;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	for (cont = 0; str[cont]; cont++)
+	{
+	}
+	nws = malloc(sizeof(*nws) * cont + 1);
+	if (nws == NULL)
+	{
+		return (NULL);
+	}
+	for (contn = 0; str[contn]; contn++)
+	{
+		nws[contn] = str[contn];
+	}
+	return (nws);
+}
+#endif
