@@ -1,0 +1,1 @@
+Hi. On this directory you'll find the files for the function pointer project.
