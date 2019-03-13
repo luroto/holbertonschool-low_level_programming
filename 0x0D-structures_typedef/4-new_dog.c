@@ -4,32 +4,32 @@
 /**
  **_strdup - copies a string on a newly allocated space
  *
- *@name: source string
+ *@str: source string
  *
  *Return: It returns a pointer to the allocated memory
  */
-char *_strdup(char *name)
+char *_strdup(char *str)
 {
 	int cont, contn;
-	char *sname;
+	char *nws;
 
-	if (name == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (cont = 0; name[cont]; cont++)
+	for (cont = 0; str[cont]; cont++)
 	{
 	}
-	name = malloc(sizeof(*name) * cont + 1);
-	if (name == NULL)
+	nws = malloc(sizeof(*nws) * cont + 1);
+	if (nws == NULL)
 	{
 		return (NULL);
 	}
-	for (contn = 0; name[contn]; contn++)
+	for (contn = 0; str[contn]; contn++)
 	{
-		sname[contn] = name[contn];
+		nws[contn] = str[contn];
 	}
-	return (name);
+	return (nws);
 }
 /**
  **new_dog - creates a new dog
@@ -40,19 +40,25 @@ char *_strdup(char *name)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *inpuname, *inpuowner;
-	inpuname = char _strdup(name);
-	inpuowner = char _strdup(owner);
+	dog_t *new_dog;
 
-	struct dog_t *new_dog;
-
-	new_dog = malloc(sizeof(struct dog_t));
+	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
 	{
+		free(new_dog);
 		return (NULL);
 	}
-	new_dog->name = name;
+	new_dog->name = _strdup(name);
+	if (new_dog->name == NULL)
+	{
+		free(name);
+	}
 	new_dog->age = age;
-	new_dog->owner = owner;
+	new_dog->owner = _strdup(owner);
+	if (new_dog->owner == NULL)
+	{
+		free(owner);
+		return (NULL);
+	}
 	return (new_dog);
 }
