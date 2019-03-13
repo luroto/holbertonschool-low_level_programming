@@ -23,6 +23,7 @@ char *_strdup(char *str)
 	nws = malloc(sizeof(*nws) * cont + 1);
 	if (nws == NULL)
 	{
+		free (nws);
 		return (NULL);
 	}
 	for (contn = 0; str[contn]; contn++)
@@ -52,6 +53,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new_dog->name == NULL)
 	{
 		free(name);
+		return (NULL);
 	}
 	new_dog->age = age;
 	new_dog->owner = _strdup(owner);
