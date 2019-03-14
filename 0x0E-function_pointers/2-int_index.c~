@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include "function_pointers.h"
+/**
+ *
+ *
+ *
+ *
+ */
+int int_index(int *array, int size, int (*cmp)(int))
+{
+	int contador;
+
+	if (size <= 0)
+	{
+		return (-1);
+	}
+	if (array != NULL && cmp != NULL)
+	{
+		for (contador = 0; contador < size; contador++)
+		{
+			(*cmp)(array[contador]);
+			if ((*cmp)(array[contador]) != 0)
+			{
+			return (contador);
+			}
+		}
+	}
+	return (-1);
+}
