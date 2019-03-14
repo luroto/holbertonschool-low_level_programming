@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ *main - make something
+ *@argc: argument counter
+ *@argv: argument pointer to a pointer of arrays
+ *Return: cerito
+ */
 int main(int argc, char **argv)
 {
 	int entero;
