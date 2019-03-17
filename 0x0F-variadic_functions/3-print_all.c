@@ -3,7 +3,9 @@
 #include "variadic_functions.h"
 /**
  *print_all - prints anything
+ *
  *@format: type of arguments
+ *
  *Return: It's a void function
  */
 void print_all(const char * const format, ...)
@@ -22,7 +24,15 @@ void print_all(const char * const format, ...)
 			break;
 		case 'i': printf("%i", va_arg(cualquiera, int));
 			break;
-		case 's': printf("%s", va_arg(cualquiera, char*));
+		case 's':
+			if (cualquiera == NULL)
+			{
+				printf("%p", va_arg(cualquiera, char*));
+			}
+			else
+			{
+				printf("%s", va_arg(cualquiera, char*));
+			}
 			break;
 		default:
 			i++;
@@ -35,5 +45,6 @@ void print_all(const char * const format, ...)
 		i++;
 		conta++;
 	}
+	va_end(cualquiera);
 	printf("\n");
 }
