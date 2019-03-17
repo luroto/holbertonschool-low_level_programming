@@ -11,7 +11,8 @@
 void print_all(const char * const format, ...)
 {
 	va_list cualquiera;
-	int i = 0, conta = 0;
+	int i = 0;
+	char *linea;
 
 	va_start(cualquiera, format);
 	while (format[i] && format)
@@ -25,23 +26,23 @@ void print_all(const char * const format, ...)
 		case 'i': printf("%i", va_arg(cualquiera, int));
 			break;
 		case 's':
-			if (cualquiera == NULL)
+			linea = va_arg(cualquiera, char *);
+			if (linea == NULL)
 			{
-				printf("%p", va_arg(cualquiera, char*));
+				printf("%p", linea);
 				break;
 			}
-				printf("%s", va_arg(cualquiera, char*));
+			printf("%s", linea);
 			break;
 		default:
 			i++;
 			continue;
 		}
-		if (conta != (i - 1))
+		if (format[i +1 ] != '\0')
 		{
 			printf(", ");
 		}
 		i++;
-		conta++;
 	}
 	va_end(cualquiera);
 	printf("\n");
