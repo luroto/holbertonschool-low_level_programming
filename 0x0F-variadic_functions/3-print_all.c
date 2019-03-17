@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdarg.h>
+#include "variadic_functions.h"
+void print_all(const char * const format, ...)
+{
+	va_list cualquiera;
+	int i = 0, conta = 0;
+
+	va_start(cualquiera, format);
+	while (format[i] && format)
+	{
+		switch(format[i])
+		{
+		case 'c': printf("%c", va_arg(cualquiera, int));
+			break;
+		case 'f': printf("%f", va_arg(cualquiera, double));
+			break;
+		case 'i': printf("%i", va_arg(cualquiera, int));
+			break;
+		case 's': printf("%s", va_arg(cualquiera, char*));
+			break;
+		default:
+			i++;
+			continue;
+		}
+		if (conta != (i - 1))
+		{
+			printf(", ");
+		}
+		i++;
+		conta++;
+	}
+	printf("\n");
+}
