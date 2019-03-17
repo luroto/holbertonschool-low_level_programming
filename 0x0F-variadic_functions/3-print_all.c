@@ -15,15 +15,18 @@ void print_all(const char * const format, ...)
 	char *linea;
 
 	va_start(cualquiera, format);
-	while (format[i] && format)
+	while (format && format[i])
 	{
-		switch(format[i])
+		switch (format[i])
 		{
-		case 'c': printf("%c", va_arg(cualquiera, int));
+		case 'c':
+			printf("%c", va_arg(cualquiera, int));
 			break;
-		case 'f': printf("%f", va_arg(cualquiera, double));
+		case 'f':
+			printf("%f", va_arg(cualquiera, double));
 			break;
-		case 'i': printf("%i", va_arg(cualquiera, int));
+		case 'i':
+			printf("%i", va_arg(cualquiera, int));
 			break;
 		case 's':
 			linea = va_arg(cualquiera, char *);
@@ -38,10 +41,8 @@ void print_all(const char * const format, ...)
 			i++;
 			continue;
 		}
-		if (format[i +1 ] != '\0')
-		{
+		if (format[i + 1] != '\0')
 			printf(", ");
-		}
 		i++;
 	}
 	va_end(cualquiera);
