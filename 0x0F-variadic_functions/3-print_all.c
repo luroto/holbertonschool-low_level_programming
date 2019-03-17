@@ -28,11 +28,9 @@ void print_all(const char * const format, ...)
 			if (cualquiera == NULL)
 			{
 				printf("%p", va_arg(cualquiera, char*));
+				break;
 			}
-			else
-			{
 				printf("%s", va_arg(cualquiera, char*));
-			}
 			break;
 		default:
 			i++;
