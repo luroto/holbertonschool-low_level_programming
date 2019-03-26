@@ -4,8 +4,8 @@
 #include "lists.h"
 #include <string.h>
 /**
- *
- *
+ *print_listint - prints all the elements in a linked list
+ *@h Pointer to the information contained in the structure
  */
 size_t print_listint(const listint_t *h)
 {
