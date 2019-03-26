@@ -5,7 +5,8 @@
 #include <string.h>
 /**
  *print_listint - prints all the elements in a linked list
- *@h Pointer to the information contained in the structure
+ *@h: Pointer to the information contained in the structure
+ *Return: the node number
  */
 size_t print_listint(const listint_t *h)
 {
@@ -20,7 +21,7 @@ size_t print_listint(const listint_t *h)
 		while (h != NULL)
 		{
 			printf("%i\n", h->n);
-			h = h->next;;
+			h = h->next;
 			contanodos++;
 		}
 	}
