@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- *binary_to_unity - converts a string of binary into integers
+ *binary_to_uint - converts a string of binary into integers
  *@b: string source
  *Return: the product of the process
  */
