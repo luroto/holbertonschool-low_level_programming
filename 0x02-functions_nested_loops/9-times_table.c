@@ -15,19 +15,15 @@ void times_table(void)
 				aux = rows * columns;
 				d = (aux / 10);
 				u = (aux % 10);
-				if (aux < 10)
-				{
-					_putchar (' ');
-				}
 				if (aux >= 10)
-				{
 					_putchar(d + '0');
-				}
 				_putchar(u + '0');
 				if (columns < 9)
 				{
 				_putchar(',');
 				_putchar(' ');
+				if ((rows * (columns + 1)) < 10)
+					_putchar(' ');
 				}
 			}
 			_putchar('\n');
