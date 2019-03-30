@@ -15,13 +15,13 @@ int main(void)
 		f3 = f1 + f2;
 		f1 = f2;
 		f2 = f3;
-		if (c == 48)
+		if (c < 48)
 		{
-			printf("%ld", f3);
+			printf("%ld, ", f3);
 		}
 		else
 		{
-			printf("%ld, ", f3);
+			printf("%ld", f3);
 		}
 	}
 	printf("\n");
