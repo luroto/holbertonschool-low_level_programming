@@ -15,7 +15,7 @@ void times_table(void)
 				aux = rows * columns;
 				d = (aux / 10);
 				u = (aux % 10);
-				if (aux < 10 && aux != 0)
+				if (aux < 10)
 				{
 					_putchar (' ');
 				}
