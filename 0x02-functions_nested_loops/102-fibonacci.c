@@ -10,12 +10,12 @@ int main(void)
 	int c;
 	long int f1 = 0, f2 = 1, f3;
 
-	for (c = 0 ; c < 49 ; c++)
+	for (c = 0 ; c < 50 ; c++)
 	{
 		f3 = f1 + f2;
 		f1 = f2;
 		f2 = f3;
-		if (c < 48)
+		if (c < 49)
 		{
 			printf("%ld, ", f3);
 		}
