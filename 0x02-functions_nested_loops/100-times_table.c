@@ -23,19 +23,19 @@ void print_times_table(int n)
 						_putchar((d % 10) + '0');
 					}
 					if (aux >= 10 && aux < 100)
+					{
 						_putchar(d + '0');
+					}
 					_putchar(u + '0');
 					if (columns < n)
 					{
 					_putchar(',');
 					_putchar(' ');
+					}
 					if ((rows * (columns + 1)) < 10)
 						_putchar(' ');
-					if (aux < 100)
-					{
-						_putchar(' ');
-					}
-					}
+					if ((rows *(columns + 1 )) < 100)
+					    _putchar(' ');
 			}
 			_putchar('\n');
 		}
