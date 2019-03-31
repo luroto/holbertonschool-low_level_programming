@@ -1,22 +1,43 @@
 #include "holberton.h"
 /**
  *print_times_table - prints the n times table
- *
- *@n: number provided by the system for making the operation
- *Return: Zero
+ *@n: n times table
+ *Return: it is suppossed to be 0
  */
 void print_times_table(int n)
 {
-	int contan, contaf, m = 0;
+	int rows, columns, aux, d, u;
 
-		for (contan = 0; contan <= n; contan++)
+	if (n >= 0 && n < 15)
+	{
+		for (rows = 0; rows <= n; rows++)
 		{
-			for (contaf = 0; contaf <= n; contaf++)
+			for (columns = 0; columns <= n; columns++)
 			{
-				m = n * contaf;
-				_putchar(m);
-				_putchar(',');
-				_putchar(' ');
+				aux = rows * columns;
+				d = (aux / 10);
+				u = (aux % 10);
+					if (aux >= 100)
+					{
+						_putchar((d / 10) + '0');
+						_putchar((d % 10) + '0');
+					}
+					if (aux >= 10 && aux < 100)
+						_putchar(d + '0');
+					_putchar(u + '0');
+					if (columns < n)
+					{
+					_putchar(',');
+					_putchar(' ');
+					if ((rows * (columns + 1)) < 10)
+						_putchar(' ');
+					if (aux < 100)
+					{
+						_putchar(' ');
+					}
+					}
 			}
+			_putchar('\n');
 		}
+	}
 }
