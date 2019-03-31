@@ -32,7 +32,7 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 					if ((rows * (columns + 1)) < 10)
-						_putchar(' ';
+						_putchar(' ');
 					if ((rows * (columns + 1)) < 100)
 						_putchar(' ');
 					}
