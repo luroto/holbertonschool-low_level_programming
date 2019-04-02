@@ -23,11 +23,13 @@ int append_text_to_file(const char *filename, char *text_content)
 		{
 			return (-1);
 		}
-		conten = write(fd, text_content, strlen(text_content));
-		if (conten == -1)
+		else
 		{
+			conten = write(fd, text_content, strlen(text_content));
+			if (conten == -1)
+			{
 			return (-1);
-		}
+			}
 	close(fd);
 	return (1);
 }
