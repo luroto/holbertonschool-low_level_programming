@@ -8,7 +8,7 @@
  *append_text_to_file - appends a string to a already created file
  *@filename: name of the file
  *@text_content: string to be appended
- *@return: 1 if sucessful, -1 if it fails
+ *Return: 1 if sucessful otherwise -1
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
