@@ -7,7 +7,8 @@
  */
 int main(int ac, char **av)
 {
-	int fdorigin, fddestiny, sizeall, alldest;
+	int fdorigin, fddestiny;
+	ssize_t sizeall, alldest;
 	char buf[1024];
 
 	if (ac != 3)
