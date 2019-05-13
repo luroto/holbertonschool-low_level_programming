@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <string.h>
 /**
- * add_node_end - Add a new node at the end.
+ **add_node_end - Add a new node at the end.
  *@n: Data to be stored
  *@head: Pointer to another pointer (node)
  * Return: the address of the new node or NULL if the function fails
@@ -17,6 +17,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	nuevonodo->str = strdup(str);
+	nuevonodo->len = strlen(str);
 	nuevonodo->next = NULL;
 	if (*head == NULL)
 	{
