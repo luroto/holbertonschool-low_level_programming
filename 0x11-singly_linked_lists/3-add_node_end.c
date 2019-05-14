@@ -8,9 +8,10 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *nuevonodo, *temp, itera = 0;
+	list_t *nuevonodo, *temp;
+	unsigned int itera = 0;
 
-	while(str)
+	while (str[itera] != '\0')
 	{
 		itera++;
 	}
