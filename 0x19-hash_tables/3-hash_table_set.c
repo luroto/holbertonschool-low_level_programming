@@ -1,38 +1,38 @@
 #include "hash_tables.h"
-
 /**
  * hash_table_set - adds an element to the hash table
  *@ht: Provided hash table
  *@key: key value
- *@value
+ *@value: Value for the key
  * Return: 1 if success, otherwise 0
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *aux;
-	hash_node_t *newnode;
+	hash_node_t *aux, *newnode;
 	unsigned long int index;
 
-	if (ht == NULL || strlen(value) == 0 || strlen(key) == 0 || value == NULL)
-	{
-		return(0);
-	}
-	newnode = malloc(sizeof(hash_node_t));
+	if (ht == NULL || strlen(key) == 0)
+		return (0);
 	index = key_index((unsigned char *)key, ht->size);
 	aux = ht->array[index];
-	while (aux != NULL)
+	if (strcmp(aux->key, key) == 0)
 	{
-		if (strcmp(key, aux->key) == 0)
-		{
-			newnode->value = strdup(value);
-		}
-		newnode->next = aux;
-		ht->array[index] = newnode;
-		return(1);
+		aux->value = strdup(value);
+		ht->array[index] = aux;
+		return (1);
 	}
+	newnode = malloc(sizeof(newnode));
+	if (newnode == NULL)
+		return (0);
 	newnode->key = strdup(key);
 	newnode->value = strdup(value);
-	newnode->next = NULL;
-	ht->array[index] = newnode;
-	return(1);
+	if (aux == NULL)
+	{
+		newnode->next = NULL;
+		ht->array[index] = newnode;
+		return (1);
+	}
+	newnode->next = aux;
+	ht->array[size] = newnode;
+	return (1);
 }
