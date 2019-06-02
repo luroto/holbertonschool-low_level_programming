@@ -1,9 +1,10 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_get -
- *
- * Return: 
+ * hash_table_get -Returns the value of a given key
+ *@ht:provided hash table
+ *@key: Key to be searched
+ * Return: Value of the given key
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
@@ -14,9 +15,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	aux = ht->array[index];
 	while (aux != NULL)
 	{
-		if (strcmp(key, ht->array[index]->key) == 0)
-			return(ht->array[index]->value);
+		if (strcmp(key, aux->key) == 0)
+			return (aux->value);
 		aux = aux->next;
 	}
-	return(NULL);
+	return (NULL);
 }
