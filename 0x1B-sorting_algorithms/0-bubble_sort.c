@@ -29,23 +29,26 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t ai = 0, aj = 1, pingu;
 
-	ai = 0;
-	while (array[ai] != '\0')
+	if (array != NULL && size > 2)
 	{
-		if (array[ai] > array[aj] && aj != size)
+		ai = 0;
+		while (array[ai] != '\0')
 		{
-			swapping(array, size, ai, aj);
-			pingu = 1;
+			if (array[ai] > array[aj] && aj != size)
+			{
+				swapping(array, size, ai, aj);
+				pingu = 1;
+			}
+			ai++;
+			aj++;
 		}
-		ai++;
-		aj++;
-	}
-	if (ai == (size - 1))
-	{
-		pingu = 0;
-	}
-	if (pingu == 1)
-	{
-		bubble_sort(array, size);
+		if (ai == (size - 1))
+		{
+			pingu = 0;
+		}
+		if (pingu == 1)
+		{
+			bubble_sort(array, size);
+		}
 	}
 }
