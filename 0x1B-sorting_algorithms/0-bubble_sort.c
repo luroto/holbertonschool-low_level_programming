@@ -29,7 +29,7 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t ai = 0, aj = 1, pingu;
 
-	if (array != NULL && size > 2)
+	if (array != NULL && size >= 2)
 	{
 		ai = 0;
 		while (array[ai] != '\0')
