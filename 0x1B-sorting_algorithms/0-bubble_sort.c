@@ -40,7 +40,7 @@ void bubble_sort(int *array, size_t size)
 		ai++;
 		aj++;
 	}
-	if (ai == (size -1))
+	if (ai == (size - 1))
 	{
 		pingu = 0;
 	}
