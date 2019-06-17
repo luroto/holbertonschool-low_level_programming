@@ -1,6 +1,24 @@
 #include "sort.h"
 
 /**
+ * Swapping - Do swaps
+ *@array: Given array
+ *@size: Size of the array
+ *@ai: First iterator
+ *@aj: Second iterator
+ * Return: 0 if sucessful
+ */
+int swapping(int *array, size_t size, size_t ai, size_t aj)
+{
+	size_t aux;
+
+	aux = array[ai];
+	array[ai] = array[aj];
+	array[aj] = aux;
+	print_array(array, size);
+	return (0);
+}
+/**
  * bubble_sort - Sorts an array of integers in ascending order
  *using Bubble sort algorithm
  *@array: Given array
@@ -9,18 +27,21 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, posi = 0 , j, posj, itera;
-	for (itera = 0; itera <= size, itera++)
+	size_t ai = 0, aj = 1, pingu = 0;
+
+	ai = 0;
+	while (array[ai] != '\0')
 	{
-		for (posi = 0; posi < size; posi++)
+		if (array[ai] > array[aj] && aj != size)
 		{
-			for (posj = 1; posj < size; posj++)
-			{
-				if (array[posi] > array[posj])
-				{
-					swapping(array, posi, posj);
-				}
-			}
+			swapping(array, size, ai, aj);
+			pingu = 1;
 		}
+		ai++;
+		aj++;
+	}
+	if (pingu == 1)
+	{
+		bubble_sort(array, size);
 	}
 }
