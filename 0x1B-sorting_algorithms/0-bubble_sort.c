@@ -34,7 +34,7 @@ void bubble_sort(int *array, size_t size)
 		ai = 0;
 		while (array[ai] != '\0')
 		{
-			if (array[ai] > array[aj])
+			if (array[ai] > array[aj] && aj != size)
 			{
 				swapping(array, size, ai, aj);
 				if (size == 2)
