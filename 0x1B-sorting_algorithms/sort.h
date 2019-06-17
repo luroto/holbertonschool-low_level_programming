@@ -32,5 +32,4 @@ void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
-int swapping(int *array, size_t size, size_t ai, size_t aj)
 #endif /* SORT_H */

@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * Swapping - Do swaps
+ *swapping - Do swaps
  *@array: Given array
  *@size: Size of the array
  *@ai: First iterator
@@ -27,7 +27,7 @@ int swapping(int *array, size_t size, size_t ai, size_t aj)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t ai = 0, aj = 1, pingu = 0;
+	size_t ai = 0, aj = 1, pingu;
 
 	ai = 0;
 	while (array[ai] != '\0')
@@ -39,6 +39,10 @@ void bubble_sort(int *array, size_t size)
 		}
 		ai++;
 		aj++;
+	}
+	if (ai == (size -1))
+	{
+		pingu = 0;
 	}
 	if (pingu == 1)
 	{
