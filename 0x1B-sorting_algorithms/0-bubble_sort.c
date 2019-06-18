@@ -13,8 +13,8 @@ int swapping(int *array, size_t size, size_t aj)
 	size_t aux;
 
 	aux = array[aj];
-	array[aj] = array[aj+1];
-	array[aj+1] = aux;
+	array[aj] = array[aj + 1];
+	array[aj + 1] = aux;
 	print_array(array, size);
 	return (0);
 }
@@ -31,12 +31,12 @@ void bubble_sort(int *array, size_t size)
 
 	if (array != NULL && size >= 2)
 	{
-		for(ai = 0; ai < (size-1); ai++)
+		for (ai = 0; ai < (size - 1); ai++)
 		{
 			pingu = 0;
-			for (aj = 0; aj < size-ai-1; aj++)
+			for (aj = 0; aj < size - ai - 1; aj++)
 			{
-				if (array[aj] > array[aj+1])
+				if (array[aj] > array[aj + 1])
 				{
 					swapping(array, size, aj);
 					pingu = 1;
