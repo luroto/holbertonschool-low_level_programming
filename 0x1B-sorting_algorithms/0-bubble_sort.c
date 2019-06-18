@@ -8,13 +8,13 @@
  *@aj: Second iterator
  * Return: 0 if sucessful
  */
-int swapping(int *array, size_t size, size_t ai, size_t aj)
+int swapping(int *array, size_t size, size_t aj)
 {
 	size_t aux;
 
-	aux = array[ai];
-	array[ai] = array[aj];
-	array[aj] = aux;
+	aux = array[aj];
+	array[aj] = array[aj+1];
+	array[aj+1] = aux;
 	print_array(array, size);
 	return (0);
 }
@@ -27,31 +27,25 @@ int swapping(int *array, size_t size, size_t ai, size_t aj)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t ai = 0, aj = 1, pingu;
+	size_t ai, aj, pingu;
 
 	if (array != NULL && size >= 2)
 	{
-		while (array[ai] != '\0')
-		{
-			if (array[ai] > array[aj] && aj != size)
-			{
-				swapping(array, size, ai, aj);
-				if (size == 2)
-				{
-					break;
-				}
-				pingu = 1;
-			}
-			ai++;
-			aj++;
-		}
-		if (ai == (size - 1) && size > 2)
+		for(ai = 0; ai < (size-1); ai++)
 		{
 			pingu = 0;
-		}
-		if (pingu == 1)
-		{
-			bubble_sort(array, size);
+			for (aj = 0; aj < size-ai-1; aj++)
+			{
+				if (array[aj] > array[aj+1])
+				{
+					swapping(array, size, aj);
+					pingu = 1;
+				}
+			}
+			if (pingu == 0)
+			{
+				break;
+			}
 		}
 	}
 }
