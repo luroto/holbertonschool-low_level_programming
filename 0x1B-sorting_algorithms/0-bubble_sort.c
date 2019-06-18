@@ -31,7 +31,6 @@ void bubble_sort(int *array, size_t size)
 
 	if (array != NULL && size >= 2)
 	{
-		ai = 0;
 		while (array[ai] != '\0')
 		{
 			if (array[ai] > array[aj] && aj != size)
@@ -45,10 +44,6 @@ void bubble_sort(int *array, size_t size)
 			}
 			ai++;
 			aj++;
-		}
-		if (size == 2)
-		{
-			pingu = 0;
 		}
 		if (ai == (size - 1) && size > 2)
 		{
