@@ -4,7 +4,6 @@
  *swapping - Do swaps
  *@array: Given array
  *@size: Size of the array
- *@ai: First iterator
  *@aj: Second iterator
  * Return: 0 if sucessful
  */
