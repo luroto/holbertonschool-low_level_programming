@@ -24,18 +24,23 @@ int swapping(int *array, size_t size, size_t ai, size_t minind)
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t ai, aj, minind;
+	size_t ai, aj, minind, pingu;
 
 	for (ai = 0; ai < (size - 1); ai++)
 	{
 		minind = ai;
+		pingu = 0;
 		for (aj = ai + 1; aj < size; aj++)
 		{
 			if (array[aj] < array[minind])
 			{
 				minind = aj;
+				pingu = 1;
 			}
 		}
+		if (pingu == 1)
+		{
 		swapping(array, size, ai, minind);
+		}
 	}
 }
