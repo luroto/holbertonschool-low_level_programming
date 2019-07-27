@@ -1,25 +1,23 @@
 #include "binary_trees.h"
-#include "9-binary_tree_height.c"
 
 /**
-* binary_tree_is_perfect - found a perfect binary tree
-* @tree: entry tree
-* Return: Perfect binary tree
-*/
+ * binary_tree_height - found the height of a binary tree
+ * @tree: given tree
+ * Return: depth
+ */
 
-int binary_tree_is_perfect(const binary_tree_t *tree)
+size_t binary_tree_height(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 	{
 		return (0);
 	}
 
-	if (tree->left == NULL && tree->right == NULL)
-	{
-		return (1);
-	}
+	size_t left_depth = 0;
+	size_t right_depth = 0;
 
-	return (binary_tree_is_perfect(tree->right) &&
-		binary_tree_is_perfect(tree->left) &&
-		(binary_tree_height(tree->right) == binary_tree_height(tree->left)));
+	left_depth = tree->left != NULL ? 1 + binary_tree_height(tree->left) : 0;
+	right_depth = tree->right != NULL ? 1 + binary_tree_height(tree->right) : 0;
+
+	return (left_depth > right_depth ? left_depth : right_depth);
 }
