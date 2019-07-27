@@ -1,6 +1,5 @@
 #include "binary_trees.h"
 #include "9-binary_tree_height.c"
-#include "15-binary_tree_is_full.c"
 
 /**
 * binary_tree_is_perfect - found a perfect binary tree
@@ -20,7 +19,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (1);
 	}
 
-	return (binary_tree_is_perfect(tree->right) && 
+	return (binary_tree_is_perfect(tree->right) &&
 			binary_tree_is_perfect(tree->left) &&
 			(binary_tree_height(tree->right) == binary_tree_height(tree->left)));
 }
