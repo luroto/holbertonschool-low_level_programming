@@ -18,18 +18,10 @@ int binary_search(int *array, size_t size, int value)
 		return(-1);
 	for (i = 0; i < size; i++)
 	{
-		printf("%lu Initializing\n", i);
 		if (i > ran)
 			return (-1);
-		mita = ((i + ran)/ 2);
+		mita = (i + ran)/ 2;
 		paraar = i;
-		printf("%lu paraar, %lu iterator\n", paraar, i);
-		if (array[mita] < value)
-			i = mita + 1;
-		if (array [mita] > value)
-			ran = mita - 1;
-		printf ("%lu imprimiendo i, %lu imprimiendo ran, %lu imprimiendo mita\n", i, ran, mita);
-		printf("Searching in array: ");
 		while (paraar <= ran)
 		{
 			if (paraar < ran)
@@ -38,6 +30,10 @@ int binary_search(int *array, size_t size, int value)
 				printf("%i\n", array[paraar]);
 			paraar++;
 		}
+		if (array[mita] < value)
+			i = mita + 1;
+		if (array [mita] > value)
+			ran = mita - 1;
 		if (array[mita] == value)
 			return(mita);
 	}
