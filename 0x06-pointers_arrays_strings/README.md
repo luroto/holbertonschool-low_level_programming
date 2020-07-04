@@ -1,1 +1,1 @@
-Hi. This directory contains all the files for the 0x06 project.
+This is the README for the second project on arrays, pointers and strings.

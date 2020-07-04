@@ -1,1 +1,1 @@
-This is the README for the second project on arrays, pointers and strings.
+Hi. This is the directory of arrays, pointers and strings project.

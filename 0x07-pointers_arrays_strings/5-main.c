@@ -1,5 +1,6 @@
-#include "holberton.h"
 #include <stdio.h>
+
+char *_strstr(char *, char *);
 
 /**
  * main - check the code for Holberton School students.
@@ -8,11 +9,11 @@
  */
 int main(void)
 {
-    char *s = "hello, world";
-    char *f = "world";
-    char *t;
+	char *s = "First, the problem. Then, write the code.";
+	char *f = "solve";
+	char *t;
 
-    t = _strstr(s, f);
-    printf("%s\n", t);
-    return (0);
+	t = _strstr(s, f);
+	printf("%s\n", (t == NULL ? "nil" : t));
+	return (0);
 }

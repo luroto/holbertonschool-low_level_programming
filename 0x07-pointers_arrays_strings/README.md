@@ -1,1 +1,1 @@
-This is a temporary README for this project
+Hi. This directory contains all the files for the 0x06 project.
