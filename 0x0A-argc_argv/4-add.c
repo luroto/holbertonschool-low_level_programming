@@ -10,23 +10,26 @@
  */
 int main(int argc, char **argv)
 {
-	int i, iv, sum1, sum2, product;
+	int i, sumando, sumatoria;
 
-	if (argc > 1)
+	if (argc == 1)
 	{
-		for (i = 1; i < argc; i++)
+		printf("%d\n", argc - 1);
+		return (0);
+	}
+	for (i = 1; i < argc; i++)
+	{
+		sumando = atoi(argv[i]);
+		if (sumando != 0)
 		{
+			sumatoria += sumando;
+		}
+		else
+		{
+			printf("%s\n", "Error");
+			return (1);
 		}
 	}
-	for (iv = 0; iv <= (i - 1); iv++)
-	{
-		if (iv == 1)
-		{
-			sum1 = atoi(argv[1]);
-		}
-		if (iv == 2)
-		{
-			sum2 = atoi(argv[2]);
-		}
+	printf("%d\n", sumatoria);
 	return (0);
 }
