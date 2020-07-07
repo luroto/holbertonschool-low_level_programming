@@ -14,7 +14,6 @@ int main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		printf("%d\n", argc - 1);
 		return (0);
 	}
 	for (i = 1; i < argc; i++)
@@ -22,7 +21,7 @@ int main(int argc, char **argv)
 		j = 0;
 		while (argv[i][j] != '\0')
 		{
-			if (argv[i][j] >= 48 && argv[i][j] >= 57)
+			if (argv[i][j] < 48 && argv[i][j] > 57)
 			{
 				printf("Error\n");
 				return (1);
