@@ -1,1 +1,0 @@
-Hi.This is the directory that contains the files for the second singly linked lists project.
