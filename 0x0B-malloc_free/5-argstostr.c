@@ -1,4 +1,4 @@
-0#include <stdlib.h>
+#include <stdlib.h>
 #include "holberton.h"
 /**
  *argstostr - Concatenates all strings passed as arguments
