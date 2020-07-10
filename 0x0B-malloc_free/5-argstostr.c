@@ -1,4 +1,4 @@
-#include <stdlib.h>
+0#include <stdlib.h>
 #include "holberton.h"
 /**
  *argstostr - Concatenates all strings passed as arguments
@@ -24,7 +24,10 @@ char *argstostr(int ac, char **av)
 	sumarize += ac - 1;
 	s = malloc(sumarize * sizeof(char));
 	if (s == NULL)
+	{
+		free(s);
 		return (NULL);
+	}
 	i = 1;
 	k = 0;
 	for (i = 1; i < ac; i++)
