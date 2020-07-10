@@ -18,14 +18,14 @@ int *array_range(int min, int max)
 	if (min == max)
 		min = 0;
 	carac = min;
-	arrint = malloc(sizeof(int) * (max - min));
+	printf("%s: %d\n%s: %d\n", "printing min", min, "printing max", max);
+	arrint = malloc(sizeof(int) * ((max - min) + 1));
 	if (arrint == NULL)
-	return (NULL);
-	for (contador = 0; contador < (max - min); contador++)
+		return (NULL);
+	for (contador = 0; contador <= (max - min); contador++)
 	{
 		arrint[contador] = carac;
-		carac++;
+	       	carac++;
 	}
-	arrint[contador] = max;
 	return (arrint);
 }
