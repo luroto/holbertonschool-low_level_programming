@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "lists.h"
 /**
  *insert_nodeint_at_index - Insert a node at a given index in a
@@ -13,21 +14,29 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *newnode, *initial;
 
 	initial = *head;
+	newnode = malloc(sizeof(*head));
+	if (newnode == NULL)
+		return (NULL);
+	newnode->n = n;
+
 	while (*head != NULL)
 	{
-		if (tofound == (idx-1))
+		if (idx == 0)
 		{
-			newnode = malloc(sizeof(*head));
-			if (newnode == NULL)
-				return (NULL);
+			newnode->next = *(head);
+			*head = newnode;
+			return (newnode);
+		}
+		else if (tofound == (idx - 1))
+		{
 			newnode->next = (*head)->next;
 			(*head)->next = newnode;
-			newnode->n = n;
 			*head = initial;
 			return (newnode);
 		}
 		(*head) = (*head)->next;
 		tofound++;
 	}
+	free(newnode);
 	return (NULL);
 }
