@@ -10,12 +10,15 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int itera;
 
-	for (itera = 0; head->next != NULL; itera++);
+	if (head == NULL)
+		return (NULL);
+	for (itera = 0; head != NULL; itera++)
 	{
-		head = head->next;
 		if (itera == index)
 		{
 			return (head);
 		}
+		head = head->next;
 	}
+	return (NULL);
 }
