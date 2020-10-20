@@ -42,5 +42,5 @@ Each repository contains the source file for each task in the project. Usually e
 $ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-nameofthefirsttask.c -o nameoftheoutputfile
 ```
 
-###Author
+### Author
 Lucía Rodríguez Toloza
