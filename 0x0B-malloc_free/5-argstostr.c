@@ -16,12 +16,12 @@ char *argstostr(int ac, char **av)
 	for (i = 1; i < ac; i++)
 	{
 		j = 0;
-		for (j = 0; av[i][j] != '\0'; j++)
+		for (j = 0; av[i][j]; j++)
 		{
 			sumarize++;
 		}
 	}
-	sumarize += ac - 1;
+	sumarize += ac;
 	s = malloc(sumarize * sizeof(char));
 	if (s == NULL)
 	{
@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 	k = 0;
 	for (i = 1; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		for (j = 0; av[i][j]; j++)
 		{
 			s[k] = av[i][j];
 			k++;
