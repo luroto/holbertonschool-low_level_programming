@@ -40,6 +40,6 @@ char *argstostr(int ac, char **av)
 		s[k] = '\n';
 		k++;
 	}
-	s[k] = '\0';
+	s[sumarize - 1] = '\0';
 	return (s);
 }
